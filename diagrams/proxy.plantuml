@@ -1,0 +1,24 @@
+@startuml
+interface ServiceInterface {
+    + operation()
+}
+
+class Service {
+    + operation()
+}
+
+class Proxy {
+    - realService: Service
+    + checkAccess()
+    + operation()
+}
+
+class Client {
+    + operation()
+}
+
+ServiceInterface <|.. Service
+ServiceInterface <|.. Proxy
+Client --> ServiceInterface : uses
+Proxy --> Service : delegates
+@enduml
