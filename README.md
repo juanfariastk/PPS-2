@@ -1,16 +1,16 @@
 # Padrões de Projeto de Software - PPS
 
-Este repositório contém exemplos de alguns dos principais padrões de projeto segundo o que pude entender e exemplificar.
-Serve de resumo para a 2º Prova de PPS.
+Este repositório contém exemplos de alguns dos principais padrões de projeto, segundo o que pude entender e exemplificar. Serve de resumo para a 2º Prova de PPS.
 
-###### Obs.: alguns diagramas estão faltando na parte de diagrams, talvez no futuro eu reorganize todo esse repósitório.
-
+###### Obs.: alguns diagramas estão faltando na parte de diagrams, talvez no futuro eu reorganize todo esse repositório.
 
 ## Padrões de Projeto Implementados
 
 ### 1. Strategy
 
-O padrão **Strategy** permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis. A estratégia permite que o algoritmo varie independentemente dos clientes que o utilizam.
+**Problema:** Quando você tem múltiplas variações de um algoritmo, o código cliente se torna sobrecarregado com diferentes versões de um mesmo procedimento, dificultando a manutenção.
+
+**Solução:** O padrão **Strategy** permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis. A estratégia permite que o algoritmo varie independentemente dos clientes que o utilizam.
 
 #### Componentes:
 
@@ -26,7 +26,9 @@ Neste exemplo, temos diferentes formas de calcular preços, e o cliente pode alt
 
 ### 2. Iterator
 
-O padrão **Iterator** permite acessar os elementos de uma coleção de maneira sequencial sem expor sua representação subjacente.
+**Problema:** Você quer percorrer uma coleção de objetos sem expor sua implementação interna, mas deseja acessar seus elementos de maneira estruturada.
+
+**Solução:** O padrão **Iterator** permite acessar os elementos de uma coleção de maneira sequencial sem expor sua representação subjacente.
 
 #### Componentes:
 
@@ -43,7 +45,9 @@ Um sistema que percorre uma lista de elementos sem expor os detalhes internos da
 
 ### 3. Adapter
 
-O padrão **Adapter** permite que interfaces incompatíveis trabalhem juntas. Funciona como um tradutor entre diferentes classes que não podem se comunicar diretamente.
+**Problema:** Quando você quer utilizar uma classe existente, mas sua interface é incompatível com a que o cliente precisa.
+
+**Solução:** O padrão **Adapter** permite que interfaces incompatíveis trabalhem juntas. Funciona como um tradutor entre diferentes classes que não podem se comunicar diretamente.
 
 #### Componentes:
 
@@ -60,7 +64,9 @@ Permite integrar sistemas legados com novos sistemas, traduzindo chamadas entre 
 
 ### 4. State
 
-O padrão **State** permite que um objeto altere seu comportamento quando seu estado interno muda. Ele parece mudar de classe para o cliente.
+**Problema:** Objetos podem mudar seu comportamento dependendo do estado interno em que se encontram, levando a grandes estruturas condicionais (e.g., `if-else` ou `switch`).
+
+**Solução:** O padrão **State** permite que um objeto altere seu comportamento quando seu estado interno muda. Ele parece mudar de classe para o cliente.
 
 #### Componentes:
 
@@ -76,7 +82,9 @@ Representa um sistema que muda de comportamento com base no estado atual, como u
 
 ### 5. Bridge
 
-O padrão **Bridge** desacopla uma abstração de sua implementação para que as duas possam variar independentemente.
+**Problema:** Quando há uma necessidade de combinar diferentes implementações com várias abstrações em uma hierarquia de classes, o código pode crescer exponencialmente, dificultando a manutenção.
+
+**Solução:** O padrão **Bridge** desacopla uma abstração de sua implementação para que as duas possam variar independentemente.
 
 #### Componentes:
 
@@ -93,7 +101,9 @@ Facilita a extensão tanto de abstrações quanto de implementações de maneira
 
 ### 6. Proxy
 
-O padrão **Proxy** fornece um substituto para outro objeto para controlar o acesso a ele. Pode ser usado para fornecer um controle adicional, como inicialização preguiçosa, controle de acesso, entre outros.
+**Problema:** Às vezes, você não quer ou não pode acessar um objeto diretamente, seja por questões de desempenho, controle de acesso ou para fazer caching.
+
+**Solução:** O padrão **Proxy** fornece um substituto para outro objeto para controlar o acesso a ele. Pode ser usado para fornecer um controle adicional, como inicialização preguiçosa, controle de acesso, entre outros.
 
 #### Componentes:
 
@@ -110,7 +120,9 @@ Um proxy pode ser utilizado para controlar o acesso a um objeto caro de ser inst
 
 ### 7. Observer
 
-O padrão **Observer** define uma dependência um-para-muitos entre objetos, de maneira que, quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
+**Problema:** Quando um objeto precisa notificar múltiplos outros objetos sobre uma mudança de estado, você pode acabar com um acoplamento muito forte entre eles.
+
+**Solução:** O padrão **Observer** define uma dependência um-para-muitos entre objetos, de maneira que, quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
 
 #### Componentes:
 
