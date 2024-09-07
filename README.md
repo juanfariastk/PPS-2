@@ -119,7 +119,7 @@ Um proxy pode ser utilizado para controlar o acesso a um objeto caro de ser inst
 ---
 
 ### 7. Observer
-####### Obs.: falta colocar esse padrão, mas esse resumo já serve de algo
+###### Obs.: falta colocar esse padrão, mas esse resumo já serve de algo
 **Problema:** Quando um objeto precisa notificar múltiplos outros objetos sobre uma mudança de estado, você pode acabar com um acoplamento muito forte entre eles.
 
 **Solução:** O padrão **Observer** define uma dependência um-para-muitos entre objetos, de maneira que, quando um objeto muda de estado, todos os seus dependentes são notificados e atualizados automaticamente.
